@@ -2,11 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="t-mysql-01.torch-ex.com",
-  user="....",
-  password="...."
-)
+
 
 url = "https://marketdata.set.or.th/mkt/investortype.do?language=en&country=US"
 response = requests.get(url)
@@ -39,9 +35,9 @@ for var in tds_list:
 
 mydb = mysql.connector.connect(
   host="t-mysql-01.torch-ex.com",
-  user="tonzking123",
-  password="0882310813@Tt",
-  database='equities'
+  user=".....",
+  password=".....",
+  database='.....'
 )
 mycursor = mydb.cursor()
 sql = "INSERT INTO local_institutions (buy, buy_perc,sell,sell_perc,net) VALUES (%s, %s, %s, %s, %s)"
